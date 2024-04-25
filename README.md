@@ -10,12 +10,14 @@ To get started with the project, follow these steps:
 
    ```bash
    git clone <repository-url>
+
+```bash   
 npm install
 PORT=8000                # Port on which the server will run
 Secret_key=<your-secret-key>  # Secret key for JWT token
 node index.js
 
-Endpoints
+## Endpoints
 User Authentication
 POST /register: Register a new user.
 POST /login: Login with existing user credentials.
@@ -27,5 +29,5 @@ PUT /updateBook/:id: Update a book by ID.
 DELETE /deleteBook/:id: Delete a book by ID.
 GET /filter: Filter books by author or publication year.
 
-Testing
+## Testing
 You can use tools like Postman to test the API endpoints. Make sure to include the necessary headers and request body for each endpoint.
