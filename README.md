@@ -11,7 +11,7 @@ To get started with the project, follow these steps:
    ```bash
    git clone <repository-url>
 npm install
-PORT=3000                # Port on which the server will run
+PORT=8000                # Port on which the server will run
 Secret_key=<your-secret-key>  # Secret key for JWT token
 node index.js
 
