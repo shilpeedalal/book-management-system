@@ -60,7 +60,7 @@ You can use tools like Postman to test the API endpoints. Make sure to include t
 ## Swagger Documentation
 Swagger documentation is available for this API. You can access it using the following link:
 
-http://localhost:<PORT>/docs
+http://localhost:8000/docs
 
 ## Dependencies
 
