@@ -106,8 +106,10 @@
  *     parameters:
  *       - in: path
  *         name: id
- *         description: User's id.
+ *         description: Book's id.
  *         required: true
+ *         schema:
+ *           type: string
  *       - in: header
  *         name: Authorization
  *         description: Token for user authentication & authorization
@@ -179,10 +181,14 @@
  *         name: id
  *         description: The Book id to be updated.
  *         schema:
+ *           type: string
+ *       - in: body
+ *         name: book
+ *         description: Book details to be updated.
+ *         required: true
+ *         schema: 
  *           type: object
  *           properties: 
- *             id:
- *               type: string
  *             title:
  *               type: string
  *             author:
@@ -201,7 +207,7 @@
 
 /**
  * @swagger
- * /delete:
+ * /deleteBook/{id}:
  *   delete:
  *     tags:
  *       - Book routes
@@ -217,10 +223,8 @@
  *         name: id
  *         description: The Book id to be deleted.
  *         schema:
- *           type: object
- *           properties:
- *             uid:
- *               type: string
+ *           type: string
+ *         required: true
  *     responses:
  *       '200':
  *         description: Book deleted Successfully
@@ -238,6 +242,12 @@
  *       - Book routes
  *     description: Retrieve a list of books filtered by author and/or publication year.
  *     parameters:
+ *       - in: header
+ *         name: Authorization
+ *         description: Token for user authetication & authorization
+ *         schema: 
+ *           type: string
+ *         required: true
  *       - in: query
  *         name: author
  *         schema:
@@ -246,7 +256,7 @@
  *       - in: query
  *         name: publicationYear
  *         schema:
- *           type: integer
+ *           type: string
  *         description: Filter books by publication year.
  *     responses:
  *       '200':
